@@ -4,8 +4,7 @@ from google_play_scraper import reviews, Sort
 import json
 
 # App ID for MindDoc (Google Play)
-APP_ID = "com.minddoc.app"
-
+APP_ID = "de.moodpath.android"
 # Number of reviews you want (try 1500–3000)
 NUM_REVIEWS = 1500
 
