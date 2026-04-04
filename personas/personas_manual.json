@@ -1,22 +1,82 @@
-{  "personas": [
-    {
-      "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
-      "derived_from_group": "G1",
-      "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
-      "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
-      "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
-      "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
-      "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+[
+  {
+    "persona_id": "P1",
+    "name": "Mya",
+    "age": 23,
+    "background": "University student dealing with stress and anxiety, looking for affordable mental health support.",
+    "goals": [
+      "Access helpful mental health resources without paying high subscription fees",
+      "Understand her mood patterns."
+    ],
+    "pain_points": [
+      "Important features are locked behind a paywall.",
+      "Feels frustrated when she cannot try features before paying"
+    ],
+    "context": "Uses mobile apps daily and prefers free or low-cost tools due to limited budget.",
+    "derived_from_group": "G1"
+  },
+  {
+    "persona_id": "P2",
+    "name": "Mick",
+    "age": 35,
+    "background": "Working professional who wants to maintain good mental health and manage stress.",
+    "goals": [
+      "Track mood and mental health regularly",
+      "Gain useful insights and improve emotional well-being."
+    ],
+    "pain_points": [
+      "Needs consistent motivation to keep using the app",
+      "Wants reliable and meaningful feedback."
+    ],
+    "context": "Uses the app during daily routines and values structured guidance.",
+    "derived_from_group": "G2"
+  },
+  {
+    "persona_id": "P3",
+    "name": "Aysha",
+    "age": 26,
+    "background": "Casual app user who expects smooth performance and ease of use.",
+    "goals": [
+      "Use the app without technical issues",
+      "Have access to basic features like language settings."
+    ],
+    "pain_points": [
+      "App bugs and crashes",
+      "Missing or poorly implemented features"
+    ],
+    "context": "Uses multiple apps daily and quickly abandons apps that are unreliable.",
+    "derived_from_group": "G3"
+  },
+  {
+    "persona_id": "P4",
+    "name": "Gabriel",
+    "age": 35,
+    "background": "Privacy-conscious user concerned about personal data and security.",
+    "goals": [
+      "Feel safe sharing personal mental health data",
+      "Trust the app with sensitive information."
+    ],
+    "pain_points": [
+      "Uncertainty about how data is stored or used",
+      "Lack of transparency about privacy policies"
+    ],
+    "context": "Avoids apps that seem untrustworthy or unclear about data handling.",
+    "derived_from_group": "G4"
+  },
+  {
+    "persona_id": "P5",
+    "name": "Priya",
+    "age": 27,
+    "background": "User experiencing mental health challenges such as anxiety and intrusive thoughts.",
+    "goals": [
+      "Find emotional support and coping tools",
+      "Better understand and manage her mental state."
+    ],
+    "pain_points": [
+      "Feels overwhelmed by negative thoughts",
+      "Needs more personalized and deeper support."
+    ],
+    "context": "Uses the app during difficult emotional moments and seeks comfort and guidance.",
+    "derived_from_group": "G5"
+  }
+]
