@@ -1,12 +1,82 @@
-{
-  "groups": [
-    {
-      "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
-      "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
-      ]
-    }
-  ]}
+[
+  {
+    "group_id": "G1",
+    "theme": "Paywall and pricing concerns",
+    "review_ids": [
+      "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
+      "7af7329a-d6ad-4ccc-aa83-689da8e7eda3",
+      "7c1a1116-284a-4c13-a6b7-a280d0f18b9e",
+      "e45752e5-ba84-41b6-be18-d6a920a2f523",
+      "a360c212-f023-438c-991b-a3f28f3dd7ba",
+      "7e59f4ee-e0c3-4213-9bb1-6f2d7b5deb9c",
+      "a01eb69d-877f-4ec3-8ada-e94608e0f2fd",
+      "c7058604-2d2a-4a5a-96b9-59ef01e8b946",
+      "39ef38ce-b7ed-4ad1-b391-98344d8e366d",
+      "c048ffab-74fe-483c-8542-45a4fae1f743"
+    ]
+  },
+  {
+    "group_id": "G2",
+    "theme": "Positive mental health support and benefits",
+    "review_ids": [
+      "11eaf701-f192-4fe1-b934-82fc5aae67d1",
+      "6f006dd6-ee8c-44db-b8c8-2b5ad3570d1c",
+      "744404cb-b45b-4d48-a82d-aad7f42ecb69",
+      "b9ef6b5a-632b-495a-9e62-969a23fae1d0",
+      "827abad8-c21a-4f99-b1d6-f1c8dced667c",
+      "25942a27-320a-4e7e-a7b4-3153bd5b405f",
+      "56dbee37-1269-41ce-9e2a-587fc5a0bbb3",
+      "89f457e0-90a6-4570-955a-696bce251acd",
+      "391d1b92-7550-45dd-a398-061e51b97c4e",
+      "f2c40ff7-f8f7-4b15-9f94-a5312574829a"
+    ]
+  },
+  {
+    "group_id": "G3",
+    "theme": "App bugs, usability, and technical issues",
+    "review_ids": [
+      "4c647c1c-6e45-442c-a691-42ee61a230a1",
+      "00fb579a-13bf-4b43-af2b-bda1bb852b9c",
+      "20fddc70-82cf-419e-b1e4-6308ebcd0843",
+      "c42bc3d3-d186-44f1-a017-6c93a1b82a28",
+      "b9081e54-336d-4c89-a696-0fb3924186b0",
+      "298bf8ee-bf8c-47b7-b2dc-59a5d9fa1947",
+      "e6619604-b5d3-49c1-8733-09c6373b0e1d",
+      "8d328b9d-9b41-4bfc-a52f-24f5ac10f6b1",
+      "fbdbce6a-fe56-4273-a957-af833fce24a7",
+      "8fdd77f7-57a2-4301-91d0-9dc678baa098"
+    ]
+  },
+  {
+    "group_id": "G4",
+    "theme": "Privacy, data sharing, and trust concerns",
+    "review_ids": [
+      "b69f4ef9-7d53-4e38-817e-9e506d787b03",
+      "8d328b9d-9b41-4bfc-a52f-24f5ac10f6b1",
+      "a01eb69d-877f-4ec3-8ada-e94608e0f2fd",
+      "fbdbce6a-fe56-4273-a957-af833fce24a7",
+      "ac69af3d-8de2-4bf1-bc05-8f5f08e1ba66",
+      "39ef38ce-b7ed-4ad1-b391-98344d8e366d",
+      "c2c0ce22-01a9-4faf-8669-a83b2f7860dd",
+      "1bd43c7c-4f5e-41c4-bb2c-4b8c268913ae",
+      "a76614c9-0808-4fbc-a135-2a4feed47c1f",
+      "52dbd779-e671-4287-a269-2d2c435112b5"
+    ]
+  },
+  {
+    "group_id": "G5",
+    "theme": "User mental health struggles and emotional needs",
+    "review_ids": [
+      "7d8e4a8f-8468-4809-aa92-29643791977e",
+      "66ce8112-d0e1-4303-8562-d9658241c735",
+      "e678380f-84d8-46cf-994e-6354468dacdf",
+      "2f223dcb-c475-4ac4-8d88-bd22438eedd6",
+      "83ab69aa-dbc5-41f2-a5ed-04114106de81",
+      "90970984-6996-464e-a369-75b868574eeb",
+      "735dd19a-1b69-4ce1-81a9-77c33b5312d1",
+      "e57fd9ce-d1b7-4829-8e28-ad2b3566f789",
+      "5036b45c-d0ea-4320-8218-611ca36535d1",
+      "b7e23fb5-2b6e-4cf8-bd4c-0ec67b273a1a"
+    ]
+  }
+]
