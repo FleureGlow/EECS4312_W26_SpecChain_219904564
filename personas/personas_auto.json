@@ -1,119 +1,82 @@
-import json
-import os
-from groq import Groq
-
-MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
-
-INPUT_FILE = "data/reviews_clean.jsonl"
-GROUPS_OUTPUT = "data/review_groups_auto.json"
-PERSONAS_OUTPUT = "personas/personas_auto.json"
-PROMPT_FILE = "prompts/prompt_auto.json"
-
-MAX_REVIEWS_FOR_PROMPT = 120
-
-
-def load_clean_reviews(path):
-    reviews = []
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            reviews.append(json.loads(line))
-    return reviews
-
-
-def load_prompts(path):
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def sample_reviews(reviews, limit=120):
-    return reviews[:limit]
-
-
-def call_groq(prompt):
-    api_key = os.getenv("GROQ_API_KEY")
-    if not api_key:
-        raise ValueError("GROQ_API_KEY environment variable is not set.")
-
-    client = Groq(api_key=api_key)
-
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=[
-            {
-                "role": "system",
-                "content": "Return only valid JSON. Do not include markdown fences."
-            },
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        temperature=0.2
-    )
-
-    return response.choices[0].message.content
-
-
-def generate_review_groups(clean_reviews, grouping_prompt):
-    review_payload = [
-        {
-            "review_id": r["review_id"],
-            "cleaned_text": r["cleaned_text"]
-        }
-        for r in clean_reviews
-    ]
-
-    prompt = (
-        f"{grouping_prompt}\n\n"
-        f"Here are the cleaned reviews:\n"
-        f"{json.dumps(review_payload, ensure_ascii=False, indent=2)}\n\n"
-        f"Return a JSON array with exactly 5 groups."
-    )
-
-    raw_output = call_groq(prompt)
-    return json.loads(raw_output)
-
-
-def generate_personas(review_groups, persona_prompt):
-    prompt = (
-        f"{persona_prompt}\n\n"
-        f"Here are the review groups:\n"
-        f"{json.dumps(review_groups, ensure_ascii=False, indent=2)}\n\n"
-        f"Return a JSON array with one persona per group."
-    )
-
-    raw_output = call_groq(prompt)
-    return json.loads(raw_output)
-
-
-def save_json(data, path):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-
-if __name__ == "__main__":
-    print("Loading cleaned reviews...")
-    reviews = load_clean_reviews(INPUT_FILE)
-
-    print("Loading prompts...")
-    prompts = load_prompts(PROMPT_FILE)
-
-    sampled_reviews = sample_reviews(reviews, MAX_REVIEWS_FOR_PROMPT)
-
-    print("Generating automated review groups...")
-    review_groups = generate_review_groups(
-        sampled_reviews,
-        prompts["review_grouping_prompt"]
-    )
-    save_json(review_groups, GROUPS_OUTPUT)
-
-    print("Generating automated personas...")
-    personas = generate_personas(
-        review_groups,
-        prompts["persona_generation_prompt"]
-    )
-    save_json(personas, PERSONAS_OUTPUT)
-
-    print("Done.")
-    print(f"Saved review groups to {GROUPS_OUTPUT}")
-    print(f"Saved personas to {PERSONAS_OUTPUT}")
+[
+  {
+    "persona_id": 1,
+    "name": "Frugal Fiona",
+    "age": 32,
+    "background": "Young professional with a limited budget",
+    "goals": [
+      "Find affordable mental health resources",
+      "Manage stress and anxiety"
+    ],
+    "pain_points": [
+      "Frustrated with paywall and subscription costs",
+      "Seeking free or low-cost alternatives"
+    ],
+    "context": "Actively seeking mental health support, but cost is a significant concern",
+    "derived_from_group": 1
+  },
+  {
+    "persona_id": 2,
+    "name": "Satisfied Samantha",
+    "age": 41,
+    "background": "Working mother with a stable income",
+    "goals": [
+      "Improve mental well-being",
+      "Find effective stress management tools"
+    ],
+    "pain_points": [
+      "Difficulty finding time for self-care",
+      "Wants to ensure the app is worth the investment"
+    ],
+    "context": "Values mental health and is willing to invest in effective tools and services",
+    "derived_from_group": 2
+  },
+  {
+    "persona_id": 3,
+    "name": "Tech-Savvy Tim",
+    "age": 28,
+    "background": "Young adult with a strong technical background",
+    "goals": [
+      "Find a seamless and efficient mental health app experience",
+      "Troubleshoot technical issues"
+    ],
+    "pain_points": [
+      "Frustrated with technical issues and limitations",
+      "Expects a smooth and intuitive app experience"
+    ],
+    "context": "Familiar with technology and expects a high level of quality and functionality from digital services",
+    "derived_from_group": 3
+  },
+  {
+    "persona_id": 4,
+    "name": "Comparative Carol",
+    "age": 38,
+    "background": "Individual with experience in traditional therapy",
+    "goals": [
+      "Find the best mental health resources",
+      "Compare and evaluate different services"
+    ],
+    "pain_points": [
+      "Difficulty choosing between services",
+      "Seeks a better alternative to traditional therapy"
+    ],
+    "context": "Has experience with traditional therapy and is evaluating alternative options",
+    "derived_from_group": 4
+  },
+  {
+    "persona_id": 5,
+    "name": "Hopeful Hannah",
+    "age": 25,
+    "background": "Young adult seeking mental health support",
+    "goals": [
+      "Improve mental health and well-being",
+      "Find a supportive community"
+    ],
+    "pain_points": [
+      "Seeking effective support for mental health concerns",
+      "Wants to track progress and growth"
+    ],
+    "context": "Motivated to improve mental health and well-being, and values supportive resources",
+    "derived_from_group": 5
+  }
+]
