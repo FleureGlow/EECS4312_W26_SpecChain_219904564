@@ -1,16 +1,273 @@
+[
+  {
+    "test_id": "T1",
+    "requirement_id": "R1",
+    "scenario": "Free and paid features are clearly labelled",
+    "steps": [
+      "Open the app home screen.",
+      "Navigate to the main features area.",
+      "Inspect visible features and labels."
+    ],
+    "expected_result": "Free and paid features are visually distinguishable before interaction."
+  },
+  {
+    "test_id": "T2",
+    "requirement_id": "R1",
+    "scenario": "Paid feature shows payment status before use",
+    "steps": [
+      "Open the app.",
+      "Select a paid-only feature.",
+      "Observe the screen before entering the feature flow."
+    ],
+    "expected_result": "The feature is marked as paid before the user spends time entering the flow."
+  },
 
-{
-  "tests": [
-    {
-      "test_id": "T_auto_1",
-      "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
-      "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
-      ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
-    }
-  ]
-}
+  {
+    "test_id": "T3",
+    "requirement_id": "R2",
+    "scenario": "Free user can log a mood entry",
+    "steps": [
+      "Launch the app using a non-subscribed account.",
+      "Open the mood check-in feature.",
+      "Submit a mood entry."
+    ],
+    "expected_result": "The user can successfully record a mood entry without subscribing."
+  },
+  {
+    "test_id": "T4",
+    "requirement_id": "R2",
+    "scenario": "Free user can access basic mood history",
+    "steps": [
+      "Launch the app using a non-subscribed account with previous check-ins.",
+      "Navigate to mood history.",
+      "Review available historical entries."
+    ],
+    "expected_result": "The user can view basic mood history without paying."
+  },
+
+  {
+    "test_id": "T5",
+    "requirement_id": "R3",
+    "scenario": "Insight summary appears after enough data been collected",
+    "steps": [
+      "Log multiple mood entries over the required time period.",
+      "Navigate to the insights or summary section.",
+      "Review the generated summary."
+    ],
+    "expected_result": "A mood summary with identifiable trends is displayed."
+  },
+  {
+    "test_id": "T6",
+    "requirement_id": "R3",
+    "scenario": "Summary includes pattern information",
+    "steps": [
+      "Use an account with sufficient mood history.",
+      "Open the insights page.",
+      "Inspect the summary content."
+    ],
+    "expected_result": "The summary shows trends or patterns derived from the user's mood data."
+  },
+
+  {
+    "test_id": "T7",
+    "requirement_id": "R4",
+    "scenario": "Reflection prompts are delivered regularly",
+    "steps": [
+      "Use the app over multiple scheduled periods.",
+      "Wait for or trigger reflection prompts.",
+      "Check whether prompts appear at expected times."
+    ],
+    "expected_result": "The app provides structured reflection prompts on a recurring basis."
+  },
+  {
+    "test_id": "T8",
+    "requirement_id": "R4",
+    "scenario": "User can save and review journal reflections",
+    "steps": [
+      "Open a reflection or journaling prompt.",
+      "Enter a written reflection.",
+      "Save the entry and reopen the history."
+    ],
+    "expected_result": "The saved reflection appears in the user's history."
+  },
+
+  {
+    "test_id": "T9",
+    "requirement_id": "R5",
+    "scenario": "App opens without crashing",
+    "steps": [
+      "Install or launch the app on a supported device.",
+      "Open the app from the home screen."
+    ],
+    "expected_result": "The app launches successfully without crashing."
+  },
+  {
+    "test_id": "T10",
+    "requirement_id": "R5",
+    "scenario": "User can complete a check-in without blocking failure",
+    "steps": [
+      "Open the app.",
+      "Start a mood check-in.",
+      "Answer the questions and submit the check-in."
+    ],
+    "expected_result": "The check-in is completed successfully and the app remains stable."
+  },
+
+  {
+    "test_id": "T11",
+    "requirement_id": "R6",
+    "scenario": "User can change language setting",
+    "steps": [
+      "Open the app settings.",
+      "Find the language option.",
+      "Switch to another available language."
+    ],
+    "expected_result": "The selected language is applied and saved."
+  },
+  {
+    "test_id": "T12",
+    "requirement_id": "R6",
+    "scenario": "User can enable secure access",
+    "steps": [
+      "Open the app settings.",
+      "Find the security or privacy settings.",
+      "Enable PIN or biometric protection.",
+      "Close and reopen the app."
+    ],
+    "expected_result": "The app requests the configured secure access method on reopening."
+  },
+
+  {
+    "test_id": "T13",
+    "requirement_id": "R7",
+    "scenario": "Privacy explanation appears before consent completion",
+    "steps": [
+      "Start onboarding as a new user.",
+      "Proceed to the point where personal data consent is requested.",
+      "Inspect the privacy explanation shown."
+    ],
+    "expected_result": "The app displays a readable explanation of collected data and its purpose before consent is finalized."
+  },
+  {
+    "test_id": "T14",
+    "requirement_id": "R7",
+    "scenario": "User can decline consent and exit onboarding",
+    "steps": [
+      "Start onboarding as a new user.",
+      "Reach the consent screen.",
+      "Choose not to accept consent terms."
+    ],
+    "expected_result": "The user can exit or stop onboarding without being forced deeper into setup."
+  },
+
+  {
+    "test_id": "T15",
+    "requirement_id": "R8",
+    "scenario": "User can access privacy-related settings",
+    "steps": [
+      "Log into the app.",
+      "Open account or settings.",
+      "Navigate to privacy-related settings."
+    ],
+    "expected_result": "Privacy settings are visible and accessible."
+  },
+  {
+    "test_id": "T16",
+    "requirement_id": "R8",
+    "scenario": "User can request account data deletion",
+    "steps": [
+      "Log into the app.",
+      "Open account settings.",
+      "Select the data deletion or account deletion option."
+    ],
+    "expected_result": "The app provides a visible option to request deletion of stored account data."
+  },
+
+  {
+    "test_id": "T17",
+    "requirement_id": "R9",
+    "scenario": "User can access coping guidance from the app",
+    "steps": [
+      "Open the app.",
+      "Navigate to support, guidance, or help content.",
+      "Open a coping resource."
+    ],
+    "expected_result": "The app provides accessible emotional support or coping guidance."
+  },
+  {
+    "test_id": "T18",
+    "requirement_id": "R9",
+    "scenario": "Support content is easy to reach during distress",
+    "steps": [
+      "Open the app from the home or check-in screen.",
+      "Try to access emotional support content.",
+      "Count the navigation steps required."
+    ],
+    "expected_result": "Support content is reachable within a 2 steps and uses calm, non-judgmental wording."
+  },
+
+  {
+    "test_id": "T19",
+    "requirement_id": "R10",
+    "scenario": "High risk response triggers crisis support options",
+    "steps": [
+      "Start a check-in.",
+      "Provide responses indicating self-harm or severe distress.",
+      "Submit the responses."
+    ],
+    "expected_result": "The app immediately displays crisis support options."
+  },
+  {
+    "test_id": "T20",
+    "requirement_id": "R10",
+    "scenario": "Crisis support includes direct action methods",
+    "steps": [
+      "Trigger the crisis support flow.",
+      "Inspect the support options provided."
+    ],
+    "expected_result": "At least one direct support action such as call, text, or external contact is provided."
+  },
+
+  {
+    "test_id": "T21",
+    "requirement_id": "R11",
+    "scenario": "Support options include more than one communication channel",
+    "steps": [
+      "Trigger or open support resources.",
+      "Review available communication methods."
+    ],
+    "expected_result": "The app provides more than one support communication option where possible."
+  },
+  {
+    "test_id": "T22",
+    "requirement_id": "R11",
+    "scenario": "Support content does not assume all users can make voice calls",
+    "steps": [
+      "Open the crisis or support page.",
+      "Inspect the available support methods and wording."
+    ],
+    "expected_result": "The app does not rely only on voice-call support and does not assume all users can call."
+  },
+
+  {
+    "test_id": "T23",
+    "requirement_id": "R12",
+    "scenario": "Prompts change based on previous responses",
+    "steps": [
+      "Submit several mood check-ins with a consistent pattern.",
+      "Continue using the app over later sessions.",
+      "Review the prompts shown."
+    ],
+    "expected_result": "Later prompts reflect the user's previous responses or recurring concerns."
+  },
+  {
+    "test_id": "T24",
+    "requirement_id": "R12",
+    "scenario": "Repeated prompts are reduced when responses are similar",
+    "steps": [
+      "Provide similar responses across multiple repetitive check-ins.",
+      "Monitor the prompts in future sessions."
+    ],
+    "expected_result": "The app reduces unnecessary repetition and provides more relevant follow-up content."
+  }
+]
