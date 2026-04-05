@@ -1,3 +1,6 @@
 {
-    "prompt": ""
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "purpose": "Automatically group cleaned reviews into themes and generate personas grounded in those groups.",
+  "review_grouping_prompt": "You are helping with requirements engineering. Given cleaned app reviews, group similar reviews into 5 meaningful review groups. Each group must represent a distinct user type or user situation. Return valid JSON only. Each group must include: group_id, theme, review_ids, and a short rationale.",
+  "persona_generation_prompt": "You are helping with requirements engineering. Given review groups derived from app reviews, generate one persona per group. Each persona must be grounded in the evidence from its review group. Return valid JSON only. Each persona must include: persona_id, name, age, background, goals, pain_points, context, and derived_from_group."
 }
