@@ -1,13 +1,60 @@
-{
-  "groups": [
-    {
-      "group_id": "A1",
-      "theme": "Workout logging issues",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
-      "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
-      ]
-    }
-  ]
-}
+[
+  {
+    "group_id": 1,
+    "theme": "Paywall and Cost Concerns",
+    "review_ids": [
+      "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
+      "a360c212-f023-438c-991b-a3f28f3dd7ba",
+      "e43cabdd-bfdf-412d-a5b5-c9bcc761aab2",
+      "7e59f4ee-e0c3-4213-9bb1-6f2d7b5deb9c",
+      "39ef38ce-b7ed-4ad1-b391-98344d8e366d"
+    ],
+    "rationale": "Users expressing frustration or disappointment with the app's paywall, cost, or subscription model."
+  },
+  {
+    "group_id": 2,
+    "theme": "Positive Experiences and Recommendations",
+    "review_ids": [
+      "11eaf701-f192-4fe1-b934-82fc5aae67d1",
+      "6f006dd6-ee8c-44db-b8c8-2b5ad3570d1c",
+      "744404cb-b45b-4d48-a82d-aad7f42ecb69",
+      "bdeab10f-7a47-467c-bf41-0758e90b099c",
+      "ac523545-bdc5-4534-a6eb-ab964539907e"
+    ],
+    "rationale": "Users sharing positive experiences, recommending the app, and expressing satisfaction with its features and benefits."
+  },
+  {
+    "group_id": 3,
+    "theme": "Technical Issues and Limitations",
+    "review_ids": [
+      "00fb579a-13bf-4b43-af2b-bda1bb852b9c",
+      "c2c0ce22-01a9-4faf-8669-a83b2f7860dd",
+      "abe48d35-6cad-40f8-b5d9-a176ee371a4e",
+      "20fddc70-82cf-419e-b1e4-6308ebcd0843"
+    ],
+    "rationale": "Users reporting technical issues, limitations, or difficulties with using the app."
+  },
+  {
+    "group_id": 4,
+    "theme": "Comparison to Other Services or Therapists",
+    "review_ids": [
+      "e45752e5-ba84-41b6-be18-d6a920a2f523",
+      "52dbd779-e671-4287-a269-2d2c435112b5",
+      "75bf3047-c5e8-4c3f-a0cf-8f1453ae9e09",
+      "6cf277ce-9403-430e-80fc-9ad9fdf201e5"
+    ],
+    "rationale": "Users comparing the app to other mental health services, therapists, or apps, often expressing dissatisfaction or preference for alternative options."
+  },
+  {
+    "group_id": 5,
+    "theme": "Personal Growth and Therapeutic Benefits",
+    "review_ids": [
+      "391d1b92-7550-45dd-a398-061e51b97c4e",
+      "735dd19a-1b69-4ce1-81a9-77c33b5312d1",
+      "b893372f-9355-42b4-a296-8de516f710cd",
+      "d7b4bc5b-2373-40ca-8807-5def9f622828",
+      "6739e9de-62a5-4274-8974-d7fa6b3fa386"
+    ],
+    "rationale": "Users reporting personal growth, therapeutic benefits, or positive impacts on their mental health and well-being."
+  }
+]
