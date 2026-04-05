@@ -1,13 +1,87 @@
-{  "groups": [
-    {
-      "group_id": "H1",
-      "theme": "Workout logging failures during activity tracking",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
-      "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
-      ],
-      "notes": "Removed one unrelated review about login problems from the original automated group."
-    }
-  ]
-}
+[
+  {
+    "group_id": 1,
+    "theme": "Users who value mood tracking, reflection, and emotional insight",
+    "review_ids": [
+      "11eaf701-f192-4fe1-b934-82fc5aae67d1",
+      "6f006dd6-ee8c-44db-b8c8-2b5ad3570d1c",
+      "744404cb-b45b-4d48-a82d-aad7f42ecb69",
+      "b9ef6b5a-632b-495a-9e62-969a23fae1d0",
+      "391d1b92-7550-45dd-a398-061e51b97c4e",
+      "735dd19a-1b69-4ce1-81a9-77c33b5312d1",
+      "e57fd9ce-d1b7-4829-8e28-ad2b3566f789",
+      "5036b45c-d0ea-4320-8218-611ca36535d1",
+      "680396ab-93d4-4113-8d5b-a57dd6cc495f",
+      "904af4d0-c38f-46e0-bac4-3cfacac1f278"
+    ],
+    "notes": "Refined the vague automated theme 'Positive users' into a more specific group focused on users who benefit from structured mood tracking, reflection prompts, and emotional insight."
+  },
+  {
+    "group_id": 2,
+    "theme": "Users frustrated by paywalls, subscriptions, and limited free access",
+    "review_ids": [
+      "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
+      "7af7329a-d6ad-4ccc-aa83-689da8e7eda3",
+      "7c1a1116-284a-4c13-a6b7-a280d0f18b9e",
+      "e45752e5-ba84-41b6-be18-d6a920a2f523",
+      "a360c212-f023-438c-991b-a3f28f3dd7ba",
+      "7e59f4ee-e0c3-4213-9bb1-6f2d7b5deb9c",
+      "c7058604-2d2a-4a5a-96b9-59ef01e8b946",
+      "39ef38ce-b7ed-4ad1-b391-98344d8e366d",
+      "c048ffab-74fe-483c-8542-45a4fae1f743",
+      "2e69a0d8-f877-4ae3-b33d-60aa01f8ac85"
+    ],
+    "notes": "Separated pricing complaints from general feedback and kept only reviews clearly focused on locked features, subscriptions, and perceived unfair pricing."
+  },
+  {
+    "group_id": 3,
+    "theme": "Users affected by bugs, crashes, login issues, and missing usability features",
+    "review_ids": [
+     "4c647c1c-6e45-442c-a691-42ee61a230a1",
+  "00fb579a-13bf-4b43-af2b-bda1bb852b9c",
+  "20fddc70-82cf-419e-b1e4-6308ebcd0843",
+  "c42bc3d3-d186-44f1-a017-6c93a1b82a28",
+  "b9081e54-336d-4c89-a696-0fb3924186b0",
+  "298bf8ee-bf8c-47b7-b2dc-59a5d9fa1947",
+  "e6619604-b5d3-49c1-8733-09c6373b0e1d",
+  "abe48d35-6cad-40f8-b5d9-a176ee371a4e",
+  "5eb82c4a-34d9-4ee6-bb48-2bc98f5dcc20",
+  "4d818c25-71e6-49f1-8a43-1c7cfd90e226"
+    ],
+    "notes": "Focused this group on operational and usability issues such as crashing, login problems, language settings, reminders, and security access. This is more precise than a generic automated technical grouping."
+  },
+  {
+    "group_id": 4,
+    "theme": "Users concerned about privacy, consent, accessibility, and trustworthiness",
+    "review_ids": [
+      "b69f4ef9-7d53-4e38-817e-9e506d787b03",
+      "8d328b9d-9b41-4bfc-a52f-24f5ac10f6b1",
+      "a01eb69d-877f-4ec3-8ada-e94608e0f2fd",
+      "fbdbce6a-fe56-4273-a957-af833fce24a7",
+      "c2c0ce22-01a9-4faf-8669-a83b2f7860dd",
+      "1bd43c7c-4f5e-41c4-bb2c-4b8c268913ae",
+      "52dbd779-e671-4287-a269-2d2c435112b5",
+      "66ce8112-d0e1-4303-8562-d9658241c735",
+      "ac69af3d-8de2-4bf1-bc05-8f5f08e1ba66",
+      "3d61709a-0872-45b0-a4d8-27d8db423c5a"
+    ],
+    "notes": "Refined this group to capture trust-related concerns more clearly, including data sharing, required consent, lack of anonymous use, accessibility limitations, and distrust of external support partnerships."
+  },
+  {
+    "group_id": 5,
+    "theme": "Users experiencing significant mental health struggles who need deeper support",
+    "review_ids": [
+      "7d8e4a8f-8468-4809-aa92-29643791977e",
+      "89f457e0-90a6-4570-955a-696bce251acd",
+      "e678380f-84d8-46cf-994e-6354468dacdf",
+      "2f223dcb-c475-4ac4-8d88-bd22438eedd6",
+      "83ab69aa-dbc5-41f2-a5ed-04114106de81",
+      "827abad8-c21a-4f99-b1d6-f1c8dced667c",
+      "f2c40ff7-f8f7-4b15-9f94-a5312574829a",
+      "ac523545-bdc5-4534-a6eb-ab964539907e",
+      "db7ae432-6ed4-4245-8d79-098f4b49f2a4",
+      "21c50e7e-d740-4750-b80f-1688a5a030c0"
+    ],
+    "notes": "Refined this group to focus on emotionally vulnerable users dealing with anxiety, depression, intrusive thoughts, grief, panic, or crisis-level concerns. Removed less relevant generic positive reviews."
+  }
+]
