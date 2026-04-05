@@ -1,16 +1,271 @@
-{
-  "tests": [
-    {
-      "test_id": "T_hybrid_1",
-      "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
-      "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
-      ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
-    }
-  ]
-}
+[
+  {
+    "test_id": "HT1",
+    "requirement_id": "FR_H1",
+    "scenario": "User records a daily mood entry successfully",
+    "steps": [
+      "Open the app",
+      "Navigate to the mood check-in interface",
+      "Select a mood and relevant emotion labels",
+      "Submit the check-in"
+    ],
+    "expected_result": "The mood entry is saved and the user receives confirmation that submission was successful."
+  },
+  {
+    "test_id": "HT2",
+    "requirement_id": "FR_H1",
+    "scenario": "User submits a check-in with minimal input",
+    "steps": [
+      "Open the app",
+      "Navigate to the mood check-in interface",
+      "Select only one mood value",
+      "Submit the check-in"
+    ],
+    "expected_result": "The system accepts the valid minimum required input and stores the entry."
+  },
+  {
+    "test_id": "HT3",
+    "requirement_id": "FR_H2",
+    "scenario": "User views weekly mood history",
+    "steps": [
+      "Log in with an account that has at least seven recorded mood entries",
+      "Open the mood history section",
+      "Select the weekly view"
+    ],
+    "expected_result": "The system displays a visual summary of the user's mood data for the selected week."
+  },
+  {
+    "test_id": "HT4",
+    "requirement_id": "FR_H2",
+    "scenario": "User views monthly mood trend",
+    "steps": [
+      "Log in with an account that has at least one month of mood entries",
+      "Open the mood history section",
+      "Select the monthly view"
+    ],
+    "expected_result": "The system displays a monthly trend view based on the user's recorded moods."
+  },
+  {
+    "test_id": "HT5",
+    "requirement_id": "FR_H3",
+    "scenario": "Reflection questions change after repeated use",
+    "steps": [
+      "Log in with an account that has completed multiple check-ins over several days",
+      "Open the next scheduled check-in",
+      "Review the reflection questions presented"
+    ],
+    "expected_result": "The questions are not identical to earlier prompts and reflect prior user responses."
+  },
+  {
+    "test_id": "HT6",
+    "requirement_id": "FR_H3",
+    "scenario": "System adapts prompts based on previously reported stress",
+    "steps": [
+      "Use an account that has repeatedly logged high stress levels",
+      "Open a new check-in session",
+      "Review the reflection questions and prompt content"
+    ],
+    "expected_result": "The system presents prompts relevant to stress and emotional coping rather than unrelated generic questions."
+  },
+  {
+    "test_id": "HT7",
+    "requirement_id": "FR_H4",
+    "scenario": "New user completes a free mood check-in",
+    "steps": [
+      "Install and open the app as a new user",
+      "Create or open an account if needed",
+      "Navigate to the core mood tracking feature",
+      "Complete one check-in"
+    ],
+    "expected_result": "The user can complete at least one full mood check-in without being blocked by a paywall."
+  },
+  {
+    "test_id": "HT8",
+    "requirement_id": "FR_H4",
+    "scenario": "Core mood tracking remains available without subscription",
+    "steps": [
+      "Log in with a non-subscribed user account",
+      "Navigate to the mood tracking feature",
+      "Attempt to create a mood entry"
+    ],
+    "expected_result": "The system allows access to the core mood tracking feature without requiring payment."
+  },
+  {
+    "test_id": "HT9",
+    "requirement_id": "FR_H5",
+    "scenario": "Premium feature is labeled before access",
+    "steps": [
+      "Log in as a non-subscribed user",
+      "Navigate to a premium-only feature",
+      "Inspect the feature label or access screen"
+    ],
+    "expected_result": "The system clearly indicates that the feature requires a paid subscription before the user attempts to use it."
+  },
+  {
+    "test_id": "HT10",
+    "requirement_id": "FR_H5",
+    "scenario": "Locked feature shows subscription message",
+    "steps": [
+      "Log in as a non-subscribed user",
+      "Select a locked premium feature"
+    ],
+    "expected_result": "The system displays a clear message explaining that the feature is unavailable without a subscription."
+  },
+  {
+    "test_id": "HT11",
+    "requirement_id": "FR_H6",
+    "scenario": "User logs in successfully with valid credentials",
+    "steps": [
+      "Open the app",
+      "Enter valid login credentials",
+      "Submit the login form"
+    ],
+    "expected_result": "The user is logged in successfully and the app remains stable."
+  },
+  {
+    "test_id": "HT12",
+    "requirement_id": "FR_H6",
+    "scenario": "App does not crash during login process",
+    "steps": [
+      "Open the app",
+      "Enter valid login credentials",
+      "Submit the form and wait for the response"
+    ],
+    "expected_result": "The system completes the login process without crashing, freezing, or blocking access."
+  },
+  {
+    "test_id": "HT13",
+    "requirement_id": "FR_H7",
+    "scenario": "User changes notification preference",
+    "steps": [
+      "Log in to the app",
+      "Navigate to settings",
+      "Disable or enable notifications",
+      "Save the change"
+    ],
+    "expected_result": "The system saves the updated notification preference and applies it immediately."
+  },
+  {
+    "test_id": "HT14",
+    "requirement_id": "FR_H7",
+    "scenario": "User changes app language",
+    "steps": [
+      "Log in to the app",
+      "Navigate to settings",
+      "Select a different language option",
+      "Save the change"
+    ],
+    "expected_result": "The system updates the language setting and displays interface text in the selected language."
+  },
+  {
+    "test_id": "HT15",
+    "requirement_id": "FR_H8",
+    "scenario": "User reviews data-sharing settings",
+    "steps": [
+      "Log in to the app",
+      "Open privacy settings",
+      "Review available data collection and sharing options"
+    ],
+    "expected_result": "The system displays the personal data categories collected and allows the user to review sharing settings."
+  },
+  {
+    "test_id": "HT16",
+    "requirement_id": "FR_H8",
+    "scenario": "User disables optional data sharing",
+    "steps": [
+      "Log in to the app",
+      "Open privacy settings",
+      "Disable an optional data-sharing permission",
+      "Save the setting"
+    ],
+    "expected_result": "The system saves the new preference and optional sharing is disabled."
+  },
+  {
+    "test_id": "HT17",
+    "requirement_id": "FR_H9",
+    "scenario": "User declines optional permissions and continues",
+    "steps": [
+      "Open the app as a new or returning user",
+      "Decline optional personal-data permissions",
+      "Continue to the main application"
+    ],
+    "expected_result": "The user can continue using core features without granting optional permissions."
+  },
+  {
+    "test_id": "HT18",
+    "requirement_id": "FR_H9",
+    "scenario": "Core features remain usable after optional consent refusal",
+    "steps": [
+      "Decline optional data permissions",
+      "Navigate to mood check-in and mood history",
+      "Attempt to use both features"
+    ],
+    "expected_result": "Core features continue to function even when optional permissions are not granted."
+  },
+  {
+    "test_id": "HT19",
+    "requirement_id": "FR_H10",
+    "scenario": "User accesses in-app support resources",
+    "steps": [
+      "Open the app",
+      "Navigate to the support or resources section",
+      "Select one of the available support items"
+    ],
+    "expected_result": "The system displays relevant mental health support content within the application."
+  },
+  {
+    "test_id": "HT20",
+    "requirement_id": "FR_H10",
+    "scenario": "User browses multiple support resources",
+    "steps": [
+      "Open the resources section",
+      "Open one resource",
+      "Return to the resource list",
+      "Open a second resource"
+    ],
+    "expected_result": "The user can access multiple support resources without navigation errors."
+  },
+  {
+    "test_id": "HT21",
+    "requirement_id": "FR_H11",
+    "scenario": "High-distress mood entry triggers support guidance",
+    "steps": [
+      "Open the app",
+      "Complete a mood check-in and indicate high distress",
+      "Submit the entry"
+    ],
+    "expected_result": "The system provides at least one relevant coping suggestion or support resource after submission."
+  },
+  {
+    "test_id": "HT22",
+    "requirement_id": "FR_H11",
+    "scenario": "Support shown after repeated negative check-ins",
+    "steps": [
+      "Use an account with several recent high-distress entries",
+      "Submit another negative mood check-in",
+      "Observe the post-submission guidance"
+    ],
+    "expected_result": "The system shows guidance or support options tailored to the user's repeated distress pattern."
+  },
+  {
+    "test_id": "HT23",
+    "requirement_id": "FR_H12",
+    "scenario": "Mood check-in completes within performance target",
+    "steps": [
+      "Open the app under normal network and device conditions",
+      "Navigate to the mood check-in screen",
+      "Submit a mood entry while measuring response time"
+    ],
+    "expected_result": "The system completes the interaction in 2 seconds or less."
+  },
+  {
+    "test_id": "HT24",
+    "requirement_id": "FR_H12",
+    "scenario": "Mood history loads within performance target",
+    "steps": [
+      "Log in under normal network and device conditions",
+      "Navigate to the mood history section while measuring response time"
+    ],
+    "expected_result": "The system displays the requested history view in 2 seconds or less."
+  }
+]
