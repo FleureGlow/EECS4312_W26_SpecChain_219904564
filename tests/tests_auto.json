@@ -1,15 +1,141 @@
-{
-  "tests": [
-    {
-      "test_id": "T_auto_1",
-      "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
-      "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
-      ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
-    }
-  ]
-}
+[
+  {
+    "test_id": "T_auto_1",
+    "requirement_id": "FR_auto_1",
+    "scenario": "User logs daily mood successfully",
+    "steps": [
+      "Open the app",
+      "Navigate to the mood tracking section",
+      "Select a mood and submit"
+    ],
+    "expected_result": "The mood entry is saved successfully."
+  },
+  {
+    "test_id": "T_auto_2",
+    "requirement_id": "FR_auto_1",
+    "scenario": "User views mood history",
+    "steps": [
+      "Open the app",
+      "Navigate to the mood tracking history section"
+    ],
+    "expected_result": "The user's mood history is displayed."
+  },
+  {
+    "test_id": "T_auto_3",
+    "requirement_id": "FR_auto_2",
+    "scenario": "User views personalized dashboard",
+    "steps": [
+      "Open the app",
+      "Navigate to the dashboard section"
+    ],
+    "expected_result": "The user's personalized dashboard is displayed with mood tracking history."
+  },
+  {
+    "test_id": "T_auto_4",
+    "requirement_id": "FR_auto_3",
+    "scenario": "User searches for resources",
+    "steps": [
+      "Open the app",
+      "Navigate to the resource section",
+      "Search for a specific topic"
+    ],
+    "expected_result": "A list of relevant resources is displayed."
+  },
+  {
+    "test_id": "T_auto_5",
+    "requirement_id": "FR_auto_4",
+    "scenario": "User saves a resource",
+    "steps": [
+      "Open the app",
+      "Navigate to the resource section",
+      "Find a resource and save it"
+    ],
+    "expected_result": "The resource is added to the user's saved resources list."
+  },
+  {
+    "test_id": "T_auto_6",
+    "requirement_id": "FR_auto_5",
+    "scenario": "User connects with a mental health professional",
+    "steps": [
+      "Open the app",
+      "Navigate to the support section",
+      "Click on the connect with a professional button"
+    ],
+    "expected_result": "The user is redirected to a scheduling platform."
+  },
+  {
+    "test_id": "T_auto_7",
+    "requirement_id": "FR_auto_6",
+    "scenario": "User sets a reminder",
+    "steps": [
+      "Open the app",
+      "Navigate to the reminders section",
+      "Create a new reminder"
+    ],
+    "expected_result": "The reminder is sent to the user's device at the specified time."
+  },
+  {
+    "test_id": "T_auto_8",
+    "requirement_id": "FR_auto_7",
+    "scenario": "New user navigates the app",
+    "steps": [
+      "Open the app",
+      "Complete the tutorial"
+    ],
+    "expected_result": "The user can easily navigate to the main features."
+  },
+  {
+    "test_id": "T_auto_9",
+    "requirement_id": "FR_auto_8",
+    "scenario": "User customizes their experience",
+    "steps": [
+      "Open the app",
+      "Navigate to the settings section",
+      "Select a theme or notification preference"
+    ],
+    "expected_result": "The changes are applied to the user's experience."
+  },
+  {
+    "test_id": "T_auto_10",
+    "requirement_id": "FR_auto_9",
+    "scenario": "User data is stored securely",
+    "steps": [
+      "Open the app",
+      "Collect user data"
+    ],
+    "expected_result": "The user data is encrypted and stored in a secure database."
+  },
+  {
+    "test_id": "T_auto_11",
+    "requirement_id": "FR_auto_10",
+    "scenario": "User exports their data",
+    "steps": [
+      "Open the app",
+      "Navigate to the data section",
+      "Request to export data"
+    ],
+    "expected_result": "The data is exported in a readable format."
+  },
+  {
+    "test_id": "T_auto_12",
+    "requirement_id": "FR_auto_11",
+    "scenario": "User provides feedback",
+    "steps": [
+      "Open the app",
+      "Navigate to the feedback section",
+      "Submit feedback"
+    ],
+    "expected_result": "The feedback is sent to the development team."
+  },
+  {
+    "test_id": "T_auto_13",
+    "requirement_id": "FR_auto_12",
+    "scenario": "User views changelog",
+    "steps": [
+      "Open the app",
+      "Navigate to the about section",
+      "View the changelog"
+    ],
+    "expected_result": "A list of recent updates and new features is displayed."
+  }
+]
