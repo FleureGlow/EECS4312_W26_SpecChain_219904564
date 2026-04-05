@@ -39,8 +39,14 @@ def call_groq(prompt):
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
-            {"role": "system", "content": "Return only valid JSON. Do not include markdown fences."},
-            {"role": "user", "content": prompt}
+            {
+                "role": "system",
+                "content": "Return only valid JSON. Do not include markdown fences."
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
         ],
         temperature=0.2
     )
@@ -88,16 +94,24 @@ def save_json(data, path):
 if __name__ == "__main__":
     print("Loading cleaned reviews...")
     reviews = load_clean_reviews(INPUT_FILE)
+
+    print("Loading prompts...")
     prompts = load_prompts(PROMPT_FILE)
 
     sampled_reviews = sample_reviews(reviews, MAX_REVIEWS_FOR_PROMPT)
 
     print("Generating automated review groups...")
-    review_groups = generate_review_groups(sampled_reviews, prompts["review_grouping_prompt"])
+    review_groups = generate_review_groups(
+        sampled_reviews,
+        prompts["review_grouping_prompt"]
+    )
     save_json(review_groups, GROUPS_OUTPUT)
 
     print("Generating automated personas...")
-    personas = generate_personas(review_groups, prompts["persona_generation_prompt"])
+    personas = generate_personas(
+        review_groups,
+        prompts["persona_generation_prompt"]
+    )
     save_json(personas, PERSONAS_OUTPUT)
 
     print("Done.")
