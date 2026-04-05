@@ -8,7 +8,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R1
 **Requirement ID:** R1  
 **Title:** Transparency for feature access information  
-**Originating Persona:** P1 (Sarah)  
+**Originating Persona:** P1 (Mya)  
 **Description:** The system shall clearly indicate which features are free and which features require payment before the user begins using those features.  
 
 **Acceptance Criteria:**
@@ -21,7 +21,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R2
 **Requirement ID:** R2  
 **Title:** Affordable/free mental health tracking  
-**Originating Persona:** P1 (Sarah)  
+**Originating Persona:** P1 (Mya)  
 **Description:** The system shall provide a useful free version that allows users to track mood and access basic mental health support without requiring immediate payment.  
 
 **Acceptance Criteria:**
@@ -86,7 +86,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R7
 **Requirement ID:** R7  
 **Title:** Privacy and consent transparency  
-**Originating Persona:** P4 (Daniel)  
+**Originating Persona:** P4 (Gabriel)  
 **Description:** The system shall clearly explain what personal and health-related data is collected, why it is collected, and how it is used before consent is requested.  
 
 **Acceptance Criteria:**
@@ -99,7 +99,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R8
 **Requirement ID:** R8  
 **Title:** Trustworthy account and data controls  
-**Originating Persona:** P4 (Daniel)  
+**Originating Persona:** P4 (Gabriel)  
 **Description:** The system shall provide users with control over account creation, stored personal data, and privacy-related settings.  
 
 **Acceptance Criteria:**
@@ -112,7 +112,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R9
 **Requirement ID:** R9  
 **Title:** Support for emotionally vulnerable users  
-**Originating Persona:** P5 (Emma)  
+**Originating Persona:** P5 (Priya)  
 **Description:** The system shall provide supportive guidance for users experiencing distress, anxiety, depression, or other difficult emotional states.  
 
 **Acceptance Criteria:**
@@ -125,7 +125,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R10
 **Requirement ID:** R10  
 **Title:** Crisis-response signposting  
-**Originating Persona:** P5 (Emma)  
+**Originating Persona:** P5 (Priya)  
 **Description:** The system shall provide accessible crisis support options when user responses indicate potential self-harm, suicidal ideation, or severe emotional distress.  
 
 **Acceptance Criteria:**
@@ -138,7 +138,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R11
 **Requirement ID:** R11  
 **Title:** Inclusive support options  
-**Originating Persona:** P5 (Emma)  
+**Originating Persona:** P5 (Priya)  
 **Description:** The system shall provide support pathways that consider users with different accessibility and communication needs.  
 
 **Acceptance Criteria:**
@@ -151,7 +151,7 @@ This specification was manually derived from the personas created from grouped u
 ## Requirement R12
 **Requirement ID:** R12  
 **Title:** Personalized and relevant prompts  
-**Originating Persona:** P2 (Michael)  
+**Originating Persona:** P2 (Mick)  
 **Description:** The system shall tailor prompts, questions, or follow-up insights based on the user’s previous responses and recorded mood patterns.  
 
 **Acceptance Criteria:**
