@@ -1,31 +1,92 @@
-{
-  "personas": [
-    {
-      "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
-      "derived_from_group": "H1",
-      "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
-      ],
-      "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
-      ],
-      "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
-      ],
-      "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
-      ],
-      "evidence_reviews": [
-        "rev_12",
-        "rev_41"
-      ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
-    }
-  ]
-}
+[
+  {
+    "persona_id": "HP1",
+    "name": "Maya Thompson",
+    "age": 29,
+    "background": "Maya is a young worker who uses the app often to reflect on her daily emotions and recognize patterns in her mental health journey.",
+    "goals": [
+      "Keep track of how her mood changes over time",
+      "Identify patterns and her triggers",
+      "Use data from the app to support personal growth or therapy"
+    ],
+    "pain_points": [
+      "Finds repetitive or shallow questions unhelpful",
+      "Needs feedback that actually helps her understand herself",
+      "Loses interest if the app feels too generic"
+    ],
+    "context": "She prefers structured check-ins and meaningful summaries that help her better understand how she feels across different periods.",
+    "derived_from_group": 1
+  },
+  {
+    "persona_id": "HP2",
+    "name": "Jordan Ellis",
+    "age": 22,
+    "background": "Jordan is a college student with limited financial resources who is looking for accessible mental health support without heavy upfront costs.",
+    "goals": [
+      "Use the app without being forced into a subscription immediately",
+      "Access useful features before deciding to pay",
+      "Feel that the app offers fair and transparent pricing"
+    ],
+    "pain_points": [
+      "Gets frustrated when features are locked behind paywalls",
+      "Feels misled when key functionality is restricted after onboarding",
+      "Cannot justify expensive subscriptions"
+    ],
+    "context": "Jordan is willing to consider premium features, but only after seeing real value in the free version.",
+    "derived_from_group": 2
+  },
+  {
+    "persona_id": "HP3",
+    "name": "Leila Hassan",
+    "age": 31,
+    "background": "Leila relies on the app regularly and expects it to function reliably, especially when she is using it during stressful moments.",
+    "goals": [
+      "Use the app without crashes or interruptions",
+      "Be able to log in and complete tasks consistently",
+      "Access important features like reminders and settings without issues"
+    ],
+    "pain_points": [
+      "Experiences frustration when login or technical issues block access",
+      "Loses trust when features do not work as expected",
+      "Finds missing usability features inconvenient"
+    ],
+    "context": "Since she may use the app during emotionally sensitive situations, reliability and smooth functionality are critical.",
+    "derived_from_group": 3
+  },
+  {
+    "persona_id": "HP4",
+    "name": "Noah Rivera",
+    "age": 35,
+    "background": "Noah is cautious about digital privacy and is particularly careful when using apps that involve sensitive personal or mental health data.",
+    "goals": [
+      "Clearly understand how his data is being used",
+      "Avoid sharing unnecessary personal information",
+      "Use an app that feels trustworthy and transparent"
+    ],
+    "pain_points": [
+      "Dislikes unclear data-sharing practices",
+      "Feels uncomfortable with mandatory consent requirements",
+      "Loses trust when the app or its partners seem unreliable or exploitative"
+    ],
+    "context": "Noah evaluates apps based on how well they respect privacy, transparency, and ethical handling of user data.",
+    "derived_from_group": 4
+  },
+  {
+    "persona_id": "HP5",
+    "name": "Sofia Bennett",
+    "age": 27,
+    "background": "Sofia is dealing with ongoing emotional challenges and uses the app as a form of support during difficult periods.",
+    "goals": [
+      "Find guidance when experiencing anxiety, stress, or emotional distress",
+      "Feel supported rather than judged",
+      "Use the app to better manage overwhelming thoughts and emotions"
+    ],
+    "pain_points": [
+      "Can feel overwhelmed during moments of high emotional distress",
+      "Needs support that is immediate and helpful",
+      "Finds shallow or generic advice ineffective"
+    ],
+    "context": "Sofia may turn to the app during vulnerable moments, so she needs it to provide calm, reliable, and meaningful support.",
+    "derived_from_group": 5
+  }
+]
