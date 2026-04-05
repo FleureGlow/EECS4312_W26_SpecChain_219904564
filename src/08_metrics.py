@@ -5,7 +5,6 @@ from pathlib import Path
 
 BASE_DIR = Path(".")
 
-
 AMBIGUOUS_WORDS = {
     "fast",
     "easy",
@@ -24,7 +23,7 @@ AMBIGUOUS_WORDS = {
     "personalized",
     "seamless",
     "smooth",
-    "reliable"
+    "reliable",
 }
 
 
@@ -52,18 +51,20 @@ def extract_requirements_from_markdown(path: Path):
         r"- Source Persona:\s*(?P<persona>[^\n]+)\n"
         r"- Traceability:\s*(?P<traceability>[^\n]+)\n"
         r"- Acceptance Criteria:\s*(?P<acceptance>[^\n]+)",
-        re.MULTILINE
+        re.MULTILINE,
     )
 
     requirements = []
     for match in pattern.finditer(text):
-        requirements.append({
-            "requirement_id": match.group("req_id").strip(),
-            "description": match.group("description").strip(),
-            "persona": match.group("persona").strip(),
-            "traceability": match.group("traceability").strip(),
-            "acceptance_criteria": match.group("acceptance").strip()
-        })
+        requirements.append(
+            {
+                "requirement_id": match.group("req_id").strip(),
+                "description": match.group("description").strip(),
+                "persona": match.group("persona").strip(),
+                "traceability": match.group("traceability").strip(),
+                "acceptance_criteria": match.group("acceptance").strip(),
+            }
+        )
 
     return requirements
 
@@ -86,12 +87,14 @@ def get_unique_review_ids_from_groups(groups):
     review_ids = set()
 
     for group in groups:
-        if "review_ids" in group:
-            for review_id in group["review_ids"]:
-                review_ids.add(str(review_id))
-        elif "reviews" in group:
-            for review in group["reviews"]:
-                review_ids.add(str(review["review_id"]))
+        if isinstance(group, dict):
+            if "review_ids" in group and isinstance(group["review_ids"], list):
+                for review_id in group["review_ids"]:
+                    review_ids.add(str(review_id))
+            elif "reviews" in group and isinstance(group["reviews"], list):
+                for review in group["reviews"]:
+                    if isinstance(review, dict) and "review_id" in review:
+                        review_ids.add(str(review["review_id"]))
 
     return review_ids
 
@@ -101,7 +104,7 @@ def compute_pipeline_metrics(
     review_groups_file: Path,
     personas_file: Path,
     spec_file: Path,
-    tests_file: Path
+    tests_file: Path,
 ):
     dataset_size = count_jsonl_lines(reviews_clean_file)
 
@@ -110,43 +113,60 @@ def compute_pipeline_metrics(
     tests = load_json(tests_file)
     requirements = extract_requirements_from_markdown(spec_file)
 
+    if not isinstance(review_groups, list):
+        raise ValueError(f"{review_groups_file} must contain a JSON array.")
+    if not isinstance(personas, list):
+        raise ValueError(f"{personas_file} must contain a JSON array.")
+    if not isinstance(tests, list):
+        raise ValueError(f"{tests_file} must contain a JSON array.")
+
     persona_count = len(personas)
     requirements_count = len(requirements)
-    tests_count = len(tests)
+    tests_count = len([test for test in tests if isinstance(test, dict)])
 
     used_review_ids = get_unique_review_ids_from_groups(review_groups)
-    review_coverage_ratio = round(
-        len(used_review_ids) / dataset_size, 3
-    ) if dataset_size > 0 else 0.0
+    review_coverage_ratio = (
+        round(len(used_review_ids) / dataset_size, 3) if dataset_size > 0 else 0.0
+    )
 
     traceable_requirements = [
-        req for req in requirements
+        req
+        for req in requirements
         if req["persona"] and req["traceability"]
     ]
-    traceability_ratio = round(
-        len(traceable_requirements) / requirements_count, 3
-    ) if requirements_count > 0 else 0.0
+    traceability_ratio = (
+        round(len(traceable_requirements) / requirements_count, 3)
+        if requirements_count > 0
+        else 0.0
+    )
 
     requirement_ids = {req["requirement_id"] for req in requirements}
     tested_requirement_ids = {
         test["requirement_id"]
         for test in tests
-        if "requirement_id" in test
+        if isinstance(test, dict) and "requirement_id" in test
     }
 
     testable_count = len(requirement_ids.intersection(tested_requirement_ids))
-    testability_rate = round(
-        testable_count / requirements_count, 3
-    ) if requirements_count > 0 else 0.0
+    testability_rate = (
+        round(testable_count / requirements_count, 3)
+        if requirements_count > 0
+        else 0.0
+    )
 
     ambiguity_count = count_ambiguous_requirements(requirements)
-    ambiguity_ratio = round(
-        ambiguity_count / requirements_count, 3
-    ) if requirements_count > 0 else 0.0
+    ambiguity_ratio = (
+        round(ambiguity_count / requirements_count, 3)
+        if requirements_count > 0
+        else 0.0
+    )
 
     persona_to_requirement_links = len(traceable_requirements)
     requirement_to_test_links = sum(
-        1 for test in tests if test.get("requirement_id") in requirement_ids
+        1
+        for test in tests
+        if isinstance(test, dict)
+        and test.get("requirement_id") in requirement_ids
     )
     traceability_links = persona_to_requirement_links + requirement_to_test_links
 
@@ -159,7 +179,7 @@ def compute_pipeline_metrics(
         "review_coverage_ratio": review_coverage_ratio,
         "traceability_ratio": traceability_ratio,
         "testability_rate": testability_rate,
-        "ambiguity_ratio": ambiguity_ratio
+        "ambiguity_ratio": ambiguity_ratio,
     }
 
 
@@ -176,7 +196,7 @@ def main():
         review_groups_file=BASE_DIR / "data" / "review_groups_manual.json",
         personas_file=BASE_DIR / "personas" / "personas_manual.json",
         spec_file=BASE_DIR / "spec" / "spec_manual.md",
-        tests_file=BASE_DIR / "tests" / "tests_manual.json"
+        tests_file=BASE_DIR / "tests" / "tests_manual.json",
     )
     save_json(manual_metrics, BASE_DIR / "metrics" / "metrics_manual.json")
 
@@ -185,9 +205,14 @@ def main():
         review_groups_file=BASE_DIR / "data" / "review_groups_auto.json",
         personas_file=BASE_DIR / "personas" / "personas_auto.json",
         spec_file=BASE_DIR / "spec" / "spec_auto.md",
-        tests_file=BASE_DIR / "tests" / "tests_auto.json"
+        tests_file=BASE_DIR / "tests" / "tests_auto.json",
     )
     save_json(auto_metrics, BASE_DIR / "metrics" / "metrics_auto.json")
+
+    summary = {
+        "manual": manual_metrics,
+        "automated": auto_metrics,
+    }
 
     hybrid_groups = BASE_DIR / "data" / "review_groups_hybrid.json"
     hybrid_personas = BASE_DIR / "personas" / "personas_hybrid.json"
@@ -200,28 +225,20 @@ def main():
         and hybrid_spec.exists()
         and hybrid_tests.exists()
     ):
-        hybrid_metrics = compute_pipeline_metrics(
-            reviews_clean_file=reviews_clean_file,
-            review_groups_file=hybrid_groups,
-            personas_file=hybrid_personas,
-            spec_file=hybrid_spec,
-            tests_file=hybrid_tests
-        )
-        save_json(hybrid_metrics, BASE_DIR / "metrics" / "metrics_hybrid.json")
+        try:
+            hybrid_metrics = compute_pipeline_metrics(
+                reviews_clean_file=reviews_clean_file,
+                review_groups_file=hybrid_groups,
+                personas_file=hybrid_personas,
+                spec_file=hybrid_spec,
+                tests_file=hybrid_tests,
+            )
+            save_json(hybrid_metrics, BASE_DIR / "metrics" / "metrics_hybrid.json")
+            summary["hybrid"] = hybrid_metrics
+        except Exception as e:
+            print(f"Skipping hybrid metrics due to invalid hybrid files: {e}")
 
-        summary = {
-            "manual": manual_metrics,
-            "automated": auto_metrics,
-            "hybrid": hybrid_metrics
-        }
-        save_json(summary, BASE_DIR / "metrics" / "metrics_summary.json")
-    else:
-        summary = {
-            "manual": manual_metrics,
-            "automated": auto_metrics
-        }
-        save_json(summary, BASE_DIR / "metrics" / "metrics_summary.json")
-
+    save_json(summary, BASE_DIR / "metrics" / "metrics_summary.json")
     print("Metrics computed successfully.")
 
 
