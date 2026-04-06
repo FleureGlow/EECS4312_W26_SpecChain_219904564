@@ -3,83 +3,77 @@
 ## Core Functionality
 
 # Requirement ID: FR_auto_1
-- Description: The system shall allow users to track their daily mood and emotions.
-- Source Persona: Emily Chen
+- Description: The system shall provide a user-friendly interface for tracking mood and emotions over time.
+- Source Persona: Emily Thompson
 - Traceability: Derived from review group 1
-- Acceptance Criteria: Given a user logs in, When they navigate to the mood tracking section, Then they can select their current mood and emotions from a predefined list.
+- Acceptance Criteria: Given a user logs in, When they navigate to the mood tracking section, Then they can easily select and record their current mood and emotions.
 
 # Requirement ID: FR_auto_2
-- Description: The system shall provide users with a personalized dashboard to view their mood tracking history.
-- Source Persona: Emily Chen
-- Traceability: Derived from review group 1
-- Acceptance Criteria: Given a user has logged mood data, When they view their dashboard, Then they can see a graphical representation of their mood tracking history.
+- Description: The system shall allow users to set and customize personal mental health goals.
+- Source Persona: Ryan Jenkins
+- Traceability: Derived from review group 2
+- Acceptance Criteria: Given a user is logged in, When they access the goal setting section, Then they can create, edit, and prioritize their mental health goals.
 
-## Resource Access
+## Mental Health Resources
 
 # Requirement ID: FR_auto_3
-- Description: The system shall provide users with access to a library of mental health resources.
-- Source Persona: David Lee
-- Traceability: Derived from review group 2
-- Acceptance Criteria: Given a user navigates to the resource section, When they search for a specific topic, Then they can access a list of relevant resources.
+- Description: The system shall provide access to a library of reliable and evidence-based mental health resources.
+- Source Persona: Dr. Liam Chen
+- Traceability: Derived from review group 5
+- Acceptance Criteria: Given a user searches for mental health resources, When they browse the library, Then they can find relevant and credible information.
+
+## User Experience
 
 # Requirement ID: FR_auto_4
-- Description: The system shall allow users to save and organize their favorite resources.
-- Source Persona: Sarah Kim
+- Description: The system shall ensure seamless and reliable performance to minimize user frustration.
+- Source Persona: Sophia Patel
 - Traceability: Derived from review group 3
-- Acceptance Criteria: Given a user finds a resource, When they click the save button, Then the resource is added to their saved resources list.
+- Acceptance Criteria: Given a user interacts with the app, When they perform actions, Then the app responds quickly and without errors.
 
-## Support and Features
+## Personalization and Feedback
 
 # Requirement ID: FR_auto_5
-- Description: The system shall provide users with a feature to connect with a mental health professional.
-- Source Persona: Rachel Patel
-- Traceability: Derived from review group 4
-- Acceptance Criteria: Given a user navigates to the support section, When they click on the connect with a professional button, Then they are redirected to a scheduling platform.
+- Description: The system shall provide personalized feedback and insights based on user data.
+- Source Persona: Emily Thompson
+- Traceability: Derived from review group 1
+- Acceptance Criteria: Given a user has tracked their mood and emotions, When they view their progress, Then they receive tailored feedback and suggestions.
+
+## Affordability and Accessibility
 
 # Requirement ID: FR_auto_6
-- Description: The system shall allow users to set reminders for medication and appointments.
-- Source Persona: Rachel Patel
-- Traceability: Derived from review group 4
-- Acceptance Criteria: Given a user navigates to the reminders section, When they create a new reminder, Then the reminder is sent to their device at the specified time.
+- Description: The system shall offer a free version with essential features and optional premium features.
+- Source Persona: Ryan Jenkins
+- Traceability: Derived from review group 2
+- Acceptance Criteria: Given a user visits the app's pricing page, When they review the features, Then they can choose a plan that suits their needs and budget.
 
-## Usability
+## Security and Data Protection
 
 # Requirement ID: FR_auto_7
-- Description: The system shall provide users with an intuitive and user-friendly interface.
-- Source Persona: Kevin White
-- Traceability: Derived from review group 5
-- Acceptance Criteria: Given a new user navigates to the app, When they complete a tutorial, Then they can easily navigate to the main features.
+- Description: The system shall ensure the confidentiality, integrity, and security of user data.
+- Source Persona: Maya Ramos
+- Traceability: Derived from review group 4
+- Acceptance Criteria: Given a user logs in, When they interact with the app, Then their personal data is protected and encrypted.
+
+## Notifications and Reminders
 
 # Requirement ID: FR_auto_8
-- Description: The system shall allow users to customize their experience with themes and notifications.
-- Source Persona: Sarah Kim
-- Traceability: Derived from review group 3
-- Acceptance Criteria: Given a user navigates to the settings section, When they select a theme or notification preference, Then the changes are applied to their experience.
+- Description: The system shall allow users to set customizable reminders and notifications for mental health activities.
+- Source Persona: Emily Thompson
+- Traceability: Derived from review group 1
+- Acceptance Criteria: Given a user sets a reminder, When the reminder is triggered, Then they receive a notification with relevant information.
 
-## Data Management
+## Community and Support
 
 # Requirement ID: FR_auto_9
-- Description: The system shall ensure user data is stored securely and in accordance with relevant regulations.
-- Source Persona: Emily Chen
-- Traceability: Derived from review group 1
-- Acceptance Criteria: Given user data is collected, When it is stored, Then it is encrypted and stored in a secure database.
+- Description: The system shall provide a secure and moderated community forum for users to connect and share experiences.
+- Source Persona: Dr. Liam Chen
+- Traceability: Derived from review group 5
+- Acceptance Criteria: Given a user joins the community, When they participate in discussions, Then they can engage with others in a safe and supportive environment.
+
+## Evaluation and Improvement
 
 # Requirement ID: FR_auto_10
-- Description: The system shall allow users to export their data for personal records.
-- Source Persona: David Lee
-- Traceability: Derived from review group 2
-- Acceptance Criteria: Given a user navigates to the data section, When they request to export their data, Then the data is exported in a readable format.
-
-## Feedback and Improvement
-
-# Requirement ID: FR_auto_11
-- Description: The system shall provide users with a way to provide feedback and suggestions.
-- Source Persona: Sarah Kim
+- Description: The system shall collect user feedback and ratings to continuously improve and refine the app.
+- Source Persona: Sophia Patel
 - Traceability: Derived from review group 3
-- Acceptance Criteria: Given a user navigates to the feedback section, When they submit feedback, Then the feedback is sent to the development team.
-
-# Requirement ID: FR_auto_12
-- Description: The system shall display a changelog of updates and new features.
-- Source Persona: Kevin White
-- Traceability: Derived from review group 5
-- Acceptance Criteria: Given a user navigates to the about section, When they view the changelog, Then they can see a list of recent updates and new features.
+- Acceptance Criteria: Given a user provides feedback, When the development team reviews it, Then they can use it to inform future updates and improvements.

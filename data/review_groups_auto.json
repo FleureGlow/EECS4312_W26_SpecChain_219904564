@@ -1,60 +1,79 @@
 [
   {
     "group_id": 1,
-    "theme": "Paywall and Cost Concerns",
-    "review_ids": [
-      "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
-      "a360c212-f023-438c-991b-a3f28f3dd7ba",
-      "e43cabdd-bfdf-412d-a5b5-c9bcc761aab2",
-      "7e59f4ee-e0c3-4213-9bb1-6f2d7b5deb9c",
-      "39ef38ce-b7ed-4ad1-b391-98344d8e366d"
-    ],
-    "rationale": "Users expressing frustration or disappointment with the app's paywall, cost, or subscription model."
-  },
-  {
-    "group_id": 2,
-    "theme": "Positive Experiences and Recommendations",
+    "theme": "Satisfied Users",
     "review_ids": [
       "11eaf701-f192-4fe1-b934-82fc5aae67d1",
       "6f006dd6-ee8c-44db-b8c8-2b5ad3570d1c",
       "744404cb-b45b-4d48-a82d-aad7f42ecb69",
       "bdeab10f-7a47-467c-bf41-0758e90b099c",
-      "ac523545-bdc5-4534-a6eb-ab964539907e"
+      "4b916b6a-3876-4c25-b88e-2a097e9effa1",
+      "75e0a48b-d4f5-4485-ba39-2f04fe6fc001",
+      "5036b45c-d0ea-4320-8218-611ca36535d1",
+      "bbb31449-236a-4773-87be-97b1b0c64a8d",
+      "d07ac3a5-2557-4ac8-a70c-27abf4f3c7db",
+      "89f457e0-90a6-4570-955a-696bce251acd",
+      "e35d746a-4924-478d-92f2-c5184cc7c8c3",
+      "bc24eb71-77c8-4ef8-82ba-dbc6c03d5e4c",
+      "a540653f-05bd-4cc3-8275-e32bb0687f55"
     ],
-    "rationale": "Users sharing positive experiences, recommending the app, and expressing satisfaction with its features and benefits."
+    "rationale": "These users are highly satisfied with the app, mentioning its helpfulness, ease of use, and positive impact on their mental health."
+  },
+  {
+    "group_id": 2,
+    "theme": "Critical of Cost",
+    "review_ids": [
+      "4cf4ff8a-3aec-4219-ba79-5cc645cc1b15",
+      "7af7329a-d6ad-4ccc-aa83-689da8e7eda3",
+      "c61692d1-a80d-49e1-b541-8b37b2d3f7aa",
+      "ac69af3d-8de2-4bf1-bc05-8f5f08e1ba66",
+      "39ef38ce-b7ed-4ad1-b391-98344d8e366d",
+      "7c228eca-f326-4808-9692-be944db95909",
+      "5ffe111a-651f-4947-abd1-5a5e833fd3b2",
+      "a360c212-f023-438c-991b-a3f28f3dd7ba",
+      "e57fd9ce-d1b7-4829-8e28-ad2b3566f789",
+      "b893372f-9355-42b4-a296-8de516f710cd"
+    ],
+    "rationale": "These users express concerns or frustration about the app's cost, paywall, or subscription model, often feeling that it limits their access to helpful features."
   },
   {
     "group_id": 3,
-    "theme": "Technical Issues and Limitations",
+    "theme": "Technical Issues",
     "review_ids": [
+      "4c647c1c-6e45-442c-a691-42ee61a230a1",
+      "8d328b9d-9b41-4bfc-a52f-24f5ac10f6b1",
       "00fb579a-13bf-4b43-af2b-bda1bb852b9c",
-      "c2c0ce22-01a9-4faf-8669-a83b2f7860dd",
       "abe48d35-6cad-40f8-b5d9-a176ee371a4e",
       "20fddc70-82cf-419e-b1e4-6308ebcd0843"
     ],
-    "rationale": "Users reporting technical issues, limitations, or difficulties with using the app."
+    "rationale": "These users report technical issues with the app, such as login problems, crashes, or errors, which hinder their experience."
   },
   {
     "group_id": 4,
-    "theme": "Comparison to Other Services or Therapists",
+    "theme": "Comparisons and Skeptics",
     "review_ids": [
+      "79d68413-4e57-46ff-af30-6344e049c314",
+      "42ec88b7-ead2-421f-b753-f5d071afa0a0",
+      "7d8e4a8f-8468-4809-aa92-29643791977e",
       "e45752e5-ba84-41b6-be18-d6a920a2f523",
-      "52dbd779-e671-4287-a269-2d2c435112b5",
-      "75bf3047-c5e8-4c3f-a0cf-8f1453ae9e09",
-      "6cf277ce-9403-430e-80fc-9ad9fdf201e5"
+      "b7e23fb5-2b6e-4cf8-bd4c-0ec67b273a1a",
+      "c2c0ce22-01a9-4faf-8669-a83b2f7860dd",
+      "f1c683f8-e041-444a-a0de-03c9c64e352f",
+      "6cf277ce-9403-430e-80fc-9ad9fdf201e5",
+      "2b4fbff3-9abd-450f-ac77-854524232594"
     ],
-    "rationale": "Users comparing the app to other mental health services, therapists, or apps, often expressing dissatisfaction or preference for alternative options."
+    "rationale": "These users compare the app to others, express skepticism about its effectiveness or are unsure about its benefits."
   },
   {
     "group_id": 5,
-    "theme": "Personal Growth and Therapeutic Benefits",
+    "theme": "Therapy and Professional Use",
     "review_ids": [
-      "391d1b92-7550-45dd-a398-061e51b97c4e",
-      "735dd19a-1b69-4ce1-81a9-77c33b5312d1",
-      "b893372f-9355-42b4-a296-8de516f710cd",
-      "d7b4bc5b-2373-40ca-8807-5def9f622828",
-      "6739e9de-62a5-4274-8974-d7fa6b3fa386"
+      "014e7949-fa7e-4897-98fd-b228f6eeebb7",
+      "d80ad7f7-c884-48f3-b0f0-82ba8096b764",
+      "abe48d35-6cad-40f8-b5d9-a176ee371a4e",
+      "ac523545-bdc5-4534-a6eb-ab964539907e",
+      "74cf37a5-1864-4d8f-bbd2-befe6d3f428d"
     ],
-    "rationale": "Users reporting personal growth, therapeutic benefits, or positive impacts on their mental health and well-being."
+    "rationale": "These users mention therapy, professional use, or more general mental health discussions, often appreciating the app's supportive role in their mental health journey."
   }
 ]

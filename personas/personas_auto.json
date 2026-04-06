@@ -1,82 +1,82 @@
 [
   {
     "persona_id": 1,
-    "name": "Frugal Fiona",
+    "name": "Emily Thompson",
     "age": 32,
-    "background": "Young professional with a limited budget",
+    "background": "Working professional, busy schedule, values mental health",
     "goals": [
-      "Find affordable mental health resources",
-      "Manage stress and anxiety"
+      "Manage stress and anxiety",
+      "Improve mental well-being"
     ],
     "pain_points": [
-      "Frustrated with paywall and subscription costs",
-      "Seeking free or low-cost alternatives"
+      "Difficulty finding time for self-care",
+      "Seeking effective mental health tools"
     ],
-    "context": "Actively seeking mental health support, but cost is a significant concern",
+    "context": "Uses mental health apps to cope with work-related stress",
     "derived_from_group": 1
   },
   {
     "persona_id": 2,
-    "name": "Satisfied Samantha",
-    "age": 41,
-    "background": "Working mother with a stable income",
+    "name": "Ryan Jenkins",
+    "age": 29,
+    "background": "Young adult, concerned about finances, seeks affordable solutions",
     "goals": [
-      "Improve mental well-being",
-      "Find effective stress management tools"
+      "Improve mental health without financial strain",
+      "Find cost-effective tools"
     ],
     "pain_points": [
-      "Difficulty finding time for self-care",
-      "Wants to ensure the app is worth the investment"
+      "Frustrated with expensive subscription models",
+      "Limited budget for mental health resources"
     ],
-    "context": "Values mental health and is willing to invest in effective tools and services",
+    "context": "Researches and compares mental health apps for affordability",
     "derived_from_group": 2
   },
   {
     "persona_id": 3,
-    "name": "Tech-Savvy Tim",
-    "age": 28,
-    "background": "Young adult with a strong technical background",
+    "name": "Sophia Patel",
+    "age": 25,
+    "background": "Tech-savvy, frustrated with technical issues",
     "goals": [
-      "Find a seamless and efficient mental health app experience",
-      "Troubleshoot technical issues"
+      "Resolve technical problems with apps",
+      "Seamless user experience"
     ],
     "pain_points": [
-      "Frustrated with technical issues and limitations",
-      "Expects a smooth and intuitive app experience"
+      "Frustrated with app crashes and errors",
+      "Seeks reliable and efficient tools"
     ],
-    "context": "Familiar with technology and expects a high level of quality and functionality from digital services",
+    "context": "Actively uses and reviews mental health apps, expects smooth functionality",
     "derived_from_group": 3
   },
   {
     "persona_id": 4,
-    "name": "Comparative Carol",
-    "age": 38,
-    "background": "Individual with experience in traditional therapy",
+    "name": "Dr. Liam Chen",
+    "age": 45,
+    "background": "Mental health professional, seeks supportive tools for patients",
     "goals": [
-      "Find the best mental health resources",
-      "Compare and evaluate different services"
+      "Recommend effective mental health resources",
+      "Support patient well-being"
     ],
     "pain_points": [
-      "Difficulty choosing between services",
-      "Seeks a better alternative to traditional therapy"
+      "Seeks reliable and evidence-based tools",
+      "Concerned about app efficacy"
     ],
-    "context": "Has experience with traditional therapy and is evaluating alternative options",
-    "derived_from_group": 4
+    "context": "Recommends and uses mental health apps in professional practice",
+    "derived_from_group": 5
   },
   {
     "persona_id": 5,
-    "name": "Hopeful Hannah",
-    "age": 25,
-    "background": "Young adult seeking mental health support",
+    "name": "Maya Ramos",
+    "age": 38,
+    "background": "Skeptical about mental health apps, seeks proven solutions",
     "goals": [
-      "Improve mental health and well-being",
-      "Find a supportive community"
+      "Verify app effectiveness",
+      "Make informed decisions about mental health resources"
     ],
     "pain_points": [
-      "Seeking effective support for mental health concerns",
-      "Wants to track progress and growth"
+      "Uncertain about app benefits",
+      "Compares and evaluates different options"
     ],
-    "context": "Motivated to improve mental health and well-being, and values supportive resources",
-    "derived_from_group": 5
+    "context": "Researches and compares mental health apps before committing",
+    "derived_from_group": 4
   }
 ]

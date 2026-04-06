@@ -16,126 +16,147 @@
     "scenario": "User views mood history",
     "steps": [
       "Open the app",
-      "Navigate to the mood tracking history section"
+      "Navigate to the mood tracking section",
+      "View mood history"
     ],
     "expected_result": "The user's mood history is displayed."
   },
   {
     "test_id": "T_auto_3",
     "requirement_id": "FR_auto_2",
-    "scenario": "User views personalized dashboard",
+    "scenario": "User creates a mental health goal",
     "steps": [
       "Open the app",
-      "Navigate to the dashboard section"
+      "Navigate to the goal setting section",
+      "Create a new goal"
     ],
-    "expected_result": "The user's personalized dashboard is displayed with mood tracking history."
+    "expected_result": "The goal is saved successfully."
   },
   {
     "test_id": "T_auto_4",
-    "requirement_id": "FR_auto_3",
-    "scenario": "User searches for resources",
+    "requirement_id": "FR_auto_2",
+    "scenario": "User edits a mental health goal",
     "steps": [
       "Open the app",
-      "Navigate to the resource section",
-      "Search for a specific topic"
+      "Navigate to the goal setting section",
+      "Edit an existing goal"
     ],
-    "expected_result": "A list of relevant resources is displayed."
+    "expected_result": "The goal is updated successfully."
   },
   {
     "test_id": "T_auto_5",
-    "requirement_id": "FR_auto_4",
-    "scenario": "User saves a resource",
+    "requirement_id": "FR_auto_3",
+    "scenario": "User searches for mental health resources",
     "steps": [
       "Open the app",
-      "Navigate to the resource section",
-      "Find a resource and save it"
+      "Navigate to the resource library",
+      "Search for a resource"
     ],
-    "expected_result": "The resource is added to the user's saved resources list."
+    "expected_result": "Relevant resources are displayed."
   },
   {
     "test_id": "T_auto_6",
-    "requirement_id": "FR_auto_5",
-    "scenario": "User connects with a mental health professional",
+    "requirement_id": "FR_auto_3",
+    "scenario": "User views resource details",
     "steps": [
       "Open the app",
-      "Navigate to the support section",
-      "Click on the connect with a professional button"
+      "Navigate to the resource library",
+      "View details of a resource"
     ],
-    "expected_result": "The user is redirected to a scheduling platform."
+    "expected_result": "The resource details are displayed."
   },
   {
     "test_id": "T_auto_7",
-    "requirement_id": "FR_auto_6",
-    "scenario": "User sets a reminder",
+    "requirement_id": "FR_auto_4",
+    "scenario": "User navigates through the app without errors",
     "steps": [
       "Open the app",
-      "Navigate to the reminders section",
-      "Create a new reminder"
+      "Navigate through different sections"
     ],
-    "expected_result": "The reminder is sent to the user's device at the specified time."
+    "expected_result": "The app responds quickly and without errors."
   },
   {
     "test_id": "T_auto_8",
-    "requirement_id": "FR_auto_7",
-    "scenario": "New user navigates the app",
+    "requirement_id": "FR_auto_4",
+    "scenario": "User performs actions quickly",
     "steps": [
       "Open the app",
-      "Complete the tutorial"
+      "Perform multiple actions in a row"
     ],
-    "expected_result": "The user can easily navigate to the main features."
+    "expected_result": "The app responds quickly to each action."
   },
   {
     "test_id": "T_auto_9",
-    "requirement_id": "FR_auto_8",
-    "scenario": "User customizes their experience",
+    "requirement_id": "FR_auto_5",
+    "scenario": "User receives personalized feedback",
     "steps": [
       "Open the app",
-      "Navigate to the settings section",
-      "Select a theme or notification preference"
+      "Track mood and emotions for a period",
+      "View progress and feedback"
     ],
-    "expected_result": "The changes are applied to the user's experience."
+    "expected_result": "The user receives tailored feedback and suggestions."
   },
   {
     "test_id": "T_auto_10",
-    "requirement_id": "FR_auto_9",
-    "scenario": "User data is stored securely",
+    "requirement_id": "FR_auto_6",
+    "scenario": "User views pricing plans",
     "steps": [
       "Open the app",
-      "Collect user data"
+      "Navigate to the pricing page"
     ],
-    "expected_result": "The user data is encrypted and stored in a secure database."
+    "expected_result": "The user can view and compare different pricing plans."
   },
   {
     "test_id": "T_auto_11",
-    "requirement_id": "FR_auto_10",
-    "scenario": "User exports their data",
+    "requirement_id": "FR_auto_6",
+    "scenario": "User selects a pricing plan",
     "steps": [
       "Open the app",
-      "Navigate to the data section",
-      "Request to export data"
+      "Navigate to the pricing page",
+      "Select a pricing plan"
     ],
-    "expected_result": "The data is exported in a readable format."
+    "expected_result": "The user can choose a plan that suits their needs and budget."
   },
   {
     "test_id": "T_auto_12",
-    "requirement_id": "FR_auto_11",
-    "scenario": "User provides feedback",
+    "requirement_id": "FR_auto_7",
+    "scenario": "User data is protected",
     "steps": [
       "Open the app",
-      "Navigate to the feedback section",
-      "Submit feedback"
+      "Log in and interact with the app"
     ],
-    "expected_result": "The feedback is sent to the development team."
+    "expected_result": "The user's personal data is protected and encrypted."
   },
   {
     "test_id": "T_auto_13",
-    "requirement_id": "FR_auto_12",
-    "scenario": "User views changelog",
+    "requirement_id": "FR_auto_8",
+    "scenario": "User receives reminders",
     "steps": [
       "Open the app",
-      "Navigate to the about section",
-      "View the changelog"
+      "Set a reminder",
+      "Wait for the reminder to trigger"
     ],
-    "expected_result": "A list of recent updates and new features is displayed."
+    "expected_result": "The user receives a notification with relevant information."
+  },
+  {
+    "test_id": "T_auto_14",
+    "requirement_id": "FR_auto_9",
+    "scenario": "User joins the community forum",
+    "steps": [
+      "Open the app",
+      "Navigate to the community forum",
+      "Join the forum"
+    ],
+    "expected_result": "The user can engage with others in a safe and supportive environment."
+  },
+  {
+    "test_id": "T_auto_15",
+    "requirement_id": "FR_auto_10",
+    "scenario": "User provides feedback",
+    "steps": [
+      "Open the app",
+      "Provide feedback"
+    ],
+    "expected_result": "The feedback is recorded and can be used to inform future updates."
   }
 ]
