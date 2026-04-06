@@ -1,6 +1,6 @@
 # SpecChain Pipeline – EECS 4312
 
-## Application Studied
+## Application Studied: MinDoc
 
 This project analyzes user reviews of a mental health mobile application (MindDoc).  
 The main goal is to extract user needs from reviews and transform them into structured software artifacts such as personas, requirements, and validation tests.
@@ -140,7 +140,7 @@ python src/run_all.py
 
 ## Key Findings
 
-- Automated pipeline is fast but more ambiguous  
+- Automated pipeline is fast but more ambiguous (mistmatches) 
 - Manual pipeline is higher quality but not scalable  
 - Hybrid pipeline provides the best balance  
 
